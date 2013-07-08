@@ -87,7 +87,8 @@
               <td class="s_cell_model" valign="middle"><?php echo $product['model']; ?></td>
               <td class="s_cell_quantity s_quantity" valign="middle">
                 <input type="text" name="quantity[<?php echo $product['key']; ?>]" value="<?php echo $product['quantity']; ?>" size="3" />
-                <input class="inline" type="image" src="catalog/view/theme/default/image/update.png" alt="<?php echo $button_update; ?>" title="<?php echo $button_update; ?>" />
+                <a href="javascript:formsub();"><div data-icon="r" class="icon inline" style="font-size: 1.8em;color:#7f8c8d;"></div></a>
+                <!-- <input class="inline" type="image" src="catalog/view/theme/default/image/update.png" alt="<?php echo $button_update; ?>" title="<?php echo $button_update; ?>" /> -->
                 <a href="<?php echo $product['remove']; ?>"><div data-icon="s" class="icon inline" style="font-size: 2em;color:#e74c3c;"></div></a>
               </td>
               <td class="s_cell_price" valign="middle"> <?php echo $product['price']; ?></td>
@@ -265,6 +266,11 @@ box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px;
       </div>
 
       <script type="text/javascript">
+
+        function formsub() {
+          $('#cart_form').submit();
+        };
+
         $("#cart_totals").accordion({
           autoHeight:  false,
           collapsible: true,
