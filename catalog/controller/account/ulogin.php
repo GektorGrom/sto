@@ -67,6 +67,22 @@ class ControllerAccountUlogin extends Controller {
 						  $mail->setTo($this->config->get('config_email'));
 						  $mail->setFrom($this->config->get('config_email'));
 						  $mail->send();
+
+						 $mail = new Mail();
+						  $mail->protocol = $this->config->get('config_mail_protocol');
+						  $mail->parameter = $this->config->get('config_mail_parameter');
+						  $mail->hostname = $this->config->get('config_smtp_host');
+						  $mail->username = $this->config->get('config_smtp_username');
+						  $mail->password = $this->config->get('config_smtp_password');
+						  $mail->port = $this->config->get('config_smtp_port');
+						  $mail->timeout = $this->config->get('config_smtp_timeout');
+						  $mail->setSubject('Спасибо за регистрацию в магазине "1 на 100"!');
+						  $mail->setSender($this->config->get('config_email'));
+						  $text = 'Использованная учетная запись: '.$data['identity'].'. Имя: '.$data['firstname'].' '.$data['lastname'].'. Email: '.$data['email'].' Пароль: '.$data['password'];
+						  $mail->setText($text);
+						  $mail->setTo($data['email']);
+						  $mail->setFrom($this->config->get('config_email'));
+						  $mail->send(); 
 		} else {
 			// входим
 			$this->model_tool_ulogin->login($check_id);
