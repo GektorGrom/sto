@@ -39,7 +39,15 @@
       <?php if ($error_warning) : ?>
       <div class="s_server_msg s_msg_red"><p><?php echo $error_warning; ?></p></div>
       <?php endif; ?>
-      
+
+      <h2 class="s_title_1"><span>Быстрый вход и регистрация</span></h2>
+          <div class="s_row_3 clearfix">
+            <p>Вы можете легко войти или автоматически зарегистрироваться на сайте, используя данные вашей четной записи из социальных сетей или популярных сервисов кликнув по кнопке. Обычная регистрация и вход доступны ниже.</p>
+          </div>
+          <center><a href="#" id="uLogin" data-ulogin="display=window;fields=first_name,last_name;redirect_uri=<? echo $action_ulogin; ?>"><img src="http://ulogin.ru/img/button.png" width=187 height=30 alt="МультиВход"/></a></center>
+          <p>&nbsp;</p>
+          <span class="clear s_sep border_ddd"></span>
+
       <div class="s_2col_wrap clearfix">
        
         <div class="s_col s_1_2">
@@ -52,7 +60,7 @@
         </div>
 
         <div class="s_col s_1_2">
-          <h2 class="s_title_1"><span><?php echo $text_returning_customer; ?></span></h2>
+          <h2 class="s_title_1"><span>Существующий клиент:</span></h2>
           <form id="login" class="login_page clearfix" action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">
             <div class="s_row_3 clearfix">
               <?php echo $text_i_am_returning_customer; ?><br /><br />
@@ -119,6 +127,7 @@
       });
       $("#login").validate();
     </script>
+    <script src="http://ulogin.ru/js/ulogin.js"></script>
 
   </div>
   <!-- end of content -->

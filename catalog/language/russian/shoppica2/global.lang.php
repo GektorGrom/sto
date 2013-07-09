@@ -57,10 +57,10 @@ $_['text_agree_affiliate']                 = 'Я прочел и согласе�
 $_['text_checkout_options']                = '<strong class="s_main_color">1</strong> Параметры отгрузки';
 $_['text_checkout_account']                = '<strong class="s_main_color">2</strong> Ваша запись и данные оплаты';
 $_['text_checkout_payment_address']        = '<strong class="s_main_color">2</strong> Данные оплаты';
-$_['text_checkout_shipping_address']       = '<strong class="s_main_color">3</strong> Параметры доставки';
-$_['text_checkout_shipping_method']        = '<strong class="s_main_color">4</strong> Способ доставки';
-$_['text_checkout_payment_method']         = '<strong class="s_main_color">5</strong> Способ оплаты';
-$_['text_checkout_confirm']                = '<strong class="s_main_color">6</strong> Подтверждение заказа';
+$_['text_checkout_shipping_address']       = '<strong class="s_main_color">2</strong> Параметры доставки';
+$_['text_checkout_shipping_method']        = '<strong class="s_main_color">3</strong> Способ доставки';
+$_['text_checkout_payment_method']         = '<strong class="s_main_color">3</strong> Способ оплаты';
+$_['text_checkout_confirm']                = '<strong class="s_main_color">4</strong> Подтверждение заказа';
 $_['text_checkout_continue']               = 'Продолжить';
 $_['text_checkout_agree']                  = 'Я прочел и согласен с документом <a class="s_main_color" rel="prettyPhoto[ajax]" href="%s" alt="%s"><b>%s</b></a>';
 
