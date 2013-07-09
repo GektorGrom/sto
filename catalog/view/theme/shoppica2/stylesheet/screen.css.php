@@ -3157,7 +3157,7 @@ body.s_layout_fixed #wrapper {
   <?php endif; ?>
   height: 20px;
 }
-#cart_menu > a {
+#cart_menu > a, #key_menu > a {
   position: relative;
   display: block;
   float: left;
@@ -3212,7 +3212,7 @@ body.s_layout_fixed #wrapper {
 {
   height: 18px;
   line-height: 18px;
-  font-size: 21px;
+  font-size: 24px;
   font-weight: normal;
 }
 #cart_menu .s_grand_total {
@@ -3245,8 +3245,8 @@ body.s_layout_fixed #wrapper {
   bottom: 20px;
   <?php if ($language == 'ltr'): ?>
   float: right;
-  margin: 27px 0 0 30px;
-  padding: 10px 0 10px 15px;
+  margin: 27px 0 0 15px;
+  padding: 10px 0 10px 10px;
   border-left: 1px solid #eee;
   <?php else: ?>
   float: left;
@@ -3254,6 +3254,16 @@ body.s_layout_fixed #wrapper {
   padding: 10px 15px 10px 0;
   border-right: 1px solid #eee;
   <?php endif; ?>
+}
+#system_navigation #key_menu {
+  position: relative;
+  float: right;
+  right: auto;
+  top: auto;
+  left: auto;
+  margin: 27px 0 0 30px;
+  padding: 10px 0 10px 15px;
+  bottom: 20px;
 }
 #system_navigation #cart_menu .s_submenu {
   margin-top: -4px;
@@ -4961,6 +4971,19 @@ select[name=customer_group_id]
     font-weight: normal;
     font-style: normal;
 }
+
+/*@font-face {
+    font-family: 'Open Sans Condensed', sans-serif;
+    src: url('../fonts/sanscond/OpenSans-CondLight.ttf');
+  }*/
+/*@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300,300italic&subset=latin,cyrillic);*/
+/*@font-face {
+    font-family: 'Open Sans', sans-serif;
+    src: url('../fonts/OpenSans/OpenSans-Regular.ttf')
+}*/
+/*@font-face {
+  @import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300,300italic&subset=latin,cyrillic);
+}*/
 /*glyphs*/
 @font-face {
   font-family: "1na100";
@@ -4993,17 +5016,8 @@ select[name=customer_group_id]
   -webkit-font-smoothing: antialiased;
 }
 
-
-.icon-bus:before {
-  content: "a";
-}
-
 .icon-buy-sign:before {
   content: "b";
-}
-
-.icon-call-old-telephone:before {
-  content: "c";
 }
 
 .icon-camera-1:before {
@@ -5050,6 +5064,41 @@ select[name=customer_group_id]
   content: "i";
 }
 
+.icon-fontawesome-webfont:before {
+  content: "l";
+}
+
+.icon-close:before {
+  content: "p";
+}
+
+.icon-fontawesome-webfont-1:before {
+  content: "q";
+}
+
+.icon-fontawesome-webfont-2:before {
+  content: "r";
+}
+
+.icon-cancel-circle:before {
+  content: "s";
+}
+
+.icon-key:before {
+  content: "t";
+}
+
+.icon-happy-smiley:before {
+  content: "u";
+}
+
+.icon-fontawesome-webfont-3:before {
+  content: "v";
+}
+
+.icon-key-1:before {
+  content: "w";
+}
 body,
 .s_item h3,
 #order_details .s_table tr.last td:first-child,
@@ -5145,14 +5194,14 @@ h2,
   letter-spacing: -1px;
 }
 .s_label .s_price,
-.s_order .s_total,
+.s_order .s_total,#key_menu .coun_key,
 #cart_menu .s_grand_total,
 #order_details .s_table tr.last td,
 #shopping_cart .s_total.last,
 #shopping_cart_confirm .s_total.last
 {
   <?php if ($font_price == 'default'): ?>
-  font-family: "Babel Sans", sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   <?php else: ?>
   font-family: <?php echo $font_price; ?>;
   <?php endif; ?>
@@ -5380,6 +5429,7 @@ h2,
     margin: 10px 10px -20px 0;
     <?php endif; ?>
   }
+  #system_navigation #key_menu{margin: 10px 0 -20px 30px;}
 
   /*** intro ***/
 
@@ -5760,9 +5810,20 @@ h2,
     text-align: center !important;
     border: none !important;
   }
+  #key_menu {
+    position: static !important;
+    float: none !important;
+    margin: 0 0 10px 0 !important;
+    padding: 10px 0 !important;
+    text-align: center !important;
+    border: none !important;
+  }
+  #key_menu .coun_key{padding: 7px !important}
   #cart_menu .s_submenu {
     display: none !important;
   }
+  #key_menu > a,
+  #key_menu > a .coun_key,
   #cart_menu > a,
   #cart_menu > a .s_text,
   #cart_menu > a .s_grand_total

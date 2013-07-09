@@ -89,8 +89,11 @@
               <?php echo $cart_contents['html']; ?>
             </div>
           </div>
+          <div id="key_menu">
+<a href="http://1na100.jesse.co.ua/index.php?route=account/login"><div data-icon="<?php if (!$logged) echo 'w'; else echo 'u'; ?>" class="icon s_main_color" style="font-size:23px; float:left;position: absolute;left: 0;top: 50%;margin-top: -13px;display: block;width: 23px;height: 23px;">
+  </div><span class="s_main_color coun_key" style="letter-spacing: -1px; margin: -6px -6px; padding: 0px 7px 0px 7px; height: 18px; line-height: 18px; font-size: 24px; font-weight: normal;"><?php if (!$logged) echo 'Вход'; else echo $this->customer->getFirstName(); ?></span></a></div>
           <?php endif; ?>
-          <p id="welcome_message">
+          <!-- <p id="welcome_message">
             <?php if (!$logged) echo $text_welcome; else echo $text_logged; ?>
           </p>
           <ul class="s_list_1">
@@ -102,7 +105,7 @@
             <li><a href="<?php echo $shopping_cart; ?>"><?php echo $text_shopping_cart; ?></a></li>
             <li><a href="<?php echo $checkout; ?>"><?php echo $text_checkout; ?></a></li>
             <?php endif; ?>
-          </ul>
+          </ul> -->
         </div>
 
       </div>

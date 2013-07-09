@@ -108,6 +108,22 @@ $("#cart_menu").hover(
         },300);
     }
 );
+// Hover effect for the key
+$("#key_menu").hover(
+    function() {
+        $(this).find(".coun_key").stop().animate({
+            color: '#ffffff',
+            backgroundColor: '#' + $sReg.get('/tb/schemer_config/colors/main')
+        },300);
+    }
+    ,
+    function() {
+        $(this).find(".coun_key").stop().animate({
+            color: '#' + $sReg.get('/tb/schemer_config/colors/main'),
+            backgroundColor: '#ffffff'
+        },300);
+    }
+);
 
 function addToCompare(product_id) {
   $.ajax({
