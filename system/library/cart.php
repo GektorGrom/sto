@@ -178,7 +178,10 @@ class Cart {
 					else $bounce_prices = array(array(time(),$price,0));
 					}
 					if (isset($bounce_prices))	{
-						if (time()-$bounce_prices[count($bounce_prices)-1][0]<1800) $price=$bounce_prices[count($bounce_prices)-1][1];
+						if (time()-$bounce_prices[count($bounce_prices)-1][0]<1800) {
+							if (count($bounce_prices)>1 && $bounce_prices[count($bounce_prices)-3][1] != "bought") $price=$bounce_prices[count($bounce_prices)-1][1];
+							else $price = $orig_price;
+						}
 					}
 					// Product Discounts
 					$discount_quantity = 0;
@@ -300,18 +303,18 @@ class Cart {
 		else $bounce_prices = array(array(time(),$price,0));
 		}
 		if (isset($bounce_prices))	{
-			if (time()-$bounce_prices[count($bounce_prices)-1][0]<1800) $price=$bounce_prices[count($bounce_prices)-1][1];
+			// if (time()-$bounce_prices[count($bounce_prices)-1][0]<1800) $price=$bounce_prices[count($bounce_prices)-1][1];
 			$bounce_prices[] = $bounce_prices[count($bounce_prices)-1];
 			$bounce_prices[count($bounce_prices)-2] = array(time(),"added",0);
 			}
 		
 		$i = 3;
 		$test = "";
-		while ($test != "added" && $i < count($bounce_prices)) {
+		while ($test != "added" && $i <= count($bounce_prices)) {
 		 	$test = $bounce_prices[count($bounce_prices)-$i][1];
 		 	$i++;
 		}
-		if ($test != "added") $i += 1;
+		// if ($test != "added") $i += 1;
 		if ($this->customer->isLogged()){
 			$this->db->query("UPDATE " . DB_PREFIX . "bounce_stats SET Clicks = '" . (-$i+1) . "' WHERE User = '" . $this->customer->getId() . "' AND Item = '" . $product_id . "' AND Time = '" . $bounce_prices[count($bounce_prices)-1][0] . "'");
 			$this->db->query("UPDATE " . DB_PREFIX . "bounce_users SET valuesd = '" . serialize($bounce_prices) . "' WHERE keysd = '" . $this->customer->getId() . "_" . $product_id . "'");
