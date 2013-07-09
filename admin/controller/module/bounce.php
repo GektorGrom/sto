@@ -111,13 +111,13 @@ class ControllerModuleBounce extends Controller {
 			'start' => ($page - 1) * $this->config->get('config_admin_limit'),
 			'limit' => $this->config->get('config_admin_limit')
 		);
-		$stats_first = $stats[0][0];
+
 		$stats = $this->model_module_bounce->getStats($data);
 		$this->data['stats'] = $stats;
 
 
 		$pagination = new Pagination();
-		$pagination->total = $bounce['total_count']-$stats_first;
+		$pagination->total = $bounce['total_count'];
 		$pagination->page = $page;
 		$pagination->limit = $this->config->get('config_admin_limit');
 		$pagination->text = $this->language->get('text_pagination');

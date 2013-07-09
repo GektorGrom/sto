@@ -15,7 +15,7 @@ class ModelToolUlogin extends Model {
 	}
         
         public function addAddress($data, $customer_id) {
-		 $this->db->query("INSERT INTO " . DB_PREFIX . "address SET customer_id = '" . (int)$customer_id . "', company = 'a', firstname = '" . $this->db->escape($data['firstname']) . "', lastname = '" . $this->db->escape($data['lastname']) . "', address_1 = 'a', address_2 = 'a', postcode = '14000', city = 'c', zone_id = '3486', country_id = '380'");
+		 $this->db->query("INSERT INTO " . DB_PREFIX . "address SET customer_id = '" . (int)$customer_id . "', company = 'Company', firstname = '" . $this->db->escape($data['firstname']) . "', lastname = '" . $this->db->escape($data['lastname']) . "', address_1 = 'Myru ave. 49A', address_2 = 'Office 1001', postcode = '14000', city = 'Chernihiv', zone_id = '3481', country_id = '220'");
 		
 		$address_id = $this->db->getLastId();
 		

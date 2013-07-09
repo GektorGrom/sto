@@ -23,7 +23,7 @@
           <h1>Настройки</h1>
           <table class="form">            
 			<tr>
-              <td><b>Всего кликов - <?php echo $bounce['total_count']; ?></b></td>
+              <td><b>Всего кликов - <?php echo $bounce['total_count']-1; ?></b></td>
 			  <td><b>Наш баланс - <?php echo $bounce['balance']*0.3; ?> грн.</b></td>
 			  <td><b>Баланс партнера - <?php echo $bounce['balance']*0.7; ?> грн.</b></td>
             </tr>
@@ -158,7 +158,7 @@
         <h1>Статистика</h1>
         <table class="list">
             <tr>
-              <td><b>Всего кликов - <?php echo $bounce['total_count']; ?></b></td>
+              <td><b>Всего кликов - <?php echo $bounce['total_count']-1; ?></b></td>
 			  <td><b>Наш баланс - <?php echo $bounce['balance']*0.3; ?> грн.</b></td>
 			  <td><b>Баланс партнера - <?php echo $bounce['balance']*0.7; ?> грн.</b></td>
             </tr>
