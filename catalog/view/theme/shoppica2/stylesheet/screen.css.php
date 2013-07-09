@@ -1218,6 +1218,7 @@ label.s_image .s_radio input
   color: #fff;
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
+.s_button_1 .s_text .icon {display:inline-block;text-transform:none;vertical-align: middle;font-size: 18px;}
 .s_button_1_small .s_text {
   height: 20px;
   line-height: 20px;
@@ -4996,13 +4997,19 @@ select[name=customer_group_id]
   font-style: normal;
 }
 
+
 [data-icon]:before {
   font-family: "1na100";
   content: attr(data-icon);
   font-style: normal;
   font-weight: normal;
+  font-variant: normal;
+  text-transform: none !important;
   speak: none;
-  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  width: 1em;
+  line-height: 1em;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -5011,10 +5018,16 @@ select[name=customer_group_id]
   font-family: "1na100";
   font-style: normal;
   font-weight: normal;
+  font-variant: normal;
+  text-transform: none !important;
   speak: none;
-  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  width: 1em;
+  line-height: 1em;
   -webkit-font-smoothing: antialiased;
 }
+
 
 .icon-buy-sign:before {
   content: "b";
@@ -5099,6 +5112,28 @@ select[name=customer_group_id]
 .icon-key-1:before {
   content: "w";
 }
+
+.icon-vkontakte:before {
+  content: "a";
+}
+
+.icon-facebook-squared:before {
+  content: "c";
+}
+
+.icon-twitter:before {
+  content: "x";
+}
+
+.icon-gplus:before {
+  content: "y";
+}
+
+.icon-dot-3:before {
+  content: "z";
+}
+
+
 body,
 .s_item h3,
 #order_details .s_table tr.last td:first-child,

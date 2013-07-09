@@ -42,9 +42,10 @@
 
       <h2 class="s_title_1"><span>Быстрый вход и регистрация</span></h2>
           <div class="s_row_3 clearfix">
-            <p>Вы можете легко войти или автоматически зарегистрироваться на сайте, используя данные вашей четной записи из социальных сетей или популярных сервисов кликнув по кнопке. Обычная регистрация и вход доступны ниже.</p>
+            <p>Вы можете легко войти или автоматически зарегистрироваться на сайте, используя данные вашей учетной записи из социальных сетей или популярных сервисов кликнув по кнопке. Обычная регистрация и вход доступны ниже.</p>
           </div>
-          <center><a href="#" id="uLogin" data-ulogin="display=window;fields=first_name,last_name;redirect_uri=<? echo $action_ulogin; ?>"><img src="http://ulogin.ru/img/button.png" width=187 height=30 alt="МультиВход"/></a></center>
+          <a href="#" id="uLogin" class="s_button_1 s_main_color_bgr" style="display: inline-block;float: none;margin-left: 30%;" data-ulogin="display=window;fields=first_name,last_name;redirect_uri=<? echo $action_ulogin; ?>"><span class="s_text">Вход с помощью <div data-icon="a" class="icon"></div> <div data-icon="c" class="icon">&nbsp;</div><div data-icon="x" class="icon"></div>&nbsp;<div data-icon="y" class="icon"></div><div data-icon="z" class="icon" style="position: relative;
+top: 5px;"></div></span></a>
           <p>&nbsp;</p>
           <span class="clear s_sep border_ddd"></span>
 
