@@ -28,6 +28,7 @@
     </div>
     <span class="clear border_ddd s_sep"></span>
     <div class="s_submit clearfix">
+      <a href="#" id="uLogin" data-ulogin="display=window;fields=first_name,last_name;redirect_uri=<? echo $action_ulogin; ?>"><img src="http://ulogin.ru/img/button.png" width=187 height=30 alt="МультиВход"/></a>
       <a id="button-account" class="s_button_1 s_main_color_bgr"><span class="s_text"><?php echo $button_continue; ?></span></a>
     </div>
   </div>
@@ -75,3 +76,4 @@
     });
   });
 </script>
+<script src="http://ulogin.ru/js/ulogin.js"></script>

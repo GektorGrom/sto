@@ -152,7 +152,7 @@
 			  <td></td><td></td><td></td><td></td>
             </tr>
         </table>
-        </form>
+        
         </div>
         <div id="tab-stats">
         <h1>Статистика</h1>
@@ -185,7 +185,7 @@
               <td class="center"><?php echo $click[0]; ?></td>
               <td class="center"><?php echo gmdate("d.m.y H:m:s", $click[5]); ?></td>
 			  <td class="center"><a href="http://1na100.jesse.co.ua/index.php?route=product/product&product_id=<?php echo $click[2]; ?>"><?php echo $click[2]; ?></a></td>
-			  <td class="center"><a href="http://1na100.jesse.co.ua/admin/index.php?route=sale/customer/update&customer_id=<?php echo $click[1]; ?>"><?php echo $click[1]; ?></a></td>
+			  <td class="center"><a href="http://1na100.jesse.co.ua/admin/index.php?route=sale/customer/update&customer_id=<?php echo $click[1]; ?>&token=<?php echo $token; ?>"><?php echo $click[1]; ?></a></td>
 			  <td class="center"><?php echo $click[3]; ?></td>
 			  <td class="center"><?php echo $click[4]; ?></td>
 			  <td class="center"><?php echo $click[7]; ?></td>
@@ -215,17 +215,12 @@
               <td class="center" colspan="8">Нет данных</td>
             </tr>
             <?php } ?>
-			<tr> <td></td> <td></td> <td></td> </tr>
-			<tr> <td></td> <td></td> <td></td> </tr>
-			<tr> <td></td> <td></td> <td></td> </tr>
-			<tr> <td></td> <td></td> <td></td> </tr>
-      <tr> <td></td> <td></td> <td></td> </tr>
-			</tbody>
+			     </tbody>
         </table>
+        </form>
         <div class="pagination"><?php echo $pagination; ?></div>
 		</div>
         </div> 
  <script type="text/javascript"><!--
 $('#tabs a').tabs();
 //--></script> 
-<?php echo $footer; ?>

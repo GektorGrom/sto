@@ -10,7 +10,7 @@ class ControllerModuleBounce extends Controller {
 		$this->load->model('module/bounce');
 		
 		$bounce = $this->model_module_bounce->getSetting();
-		$stats = $this->model_module_bounce->getStats();
+		//$stats = $this->model_module_bounce->getStats();
 		
 		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validate()) {
 			
@@ -67,7 +67,6 @@ class ControllerModuleBounce extends Controller {
 		
 		//так они вводятся и если не ввели то загружаются	- коэфициент от обычной наценки
 
-		$this->data['stats'] = $stats;
 
 		if (isset($this->request->post['bounce'])) {
 			$this->data['bounce'] = $this->request->post['bounce'];
@@ -75,22 +74,6 @@ class ControllerModuleBounce extends Controller {
 			$this->data['bounce'] = $bounce;
 		}
 
-		if (isset($this->request->get['page'])) {
-			$page = $this->request->get['page'];
-		} else {
-			$page = 1;
-		}
-
-		$url = '';
-
-		$pagination = new Pagination();
-		$pagination->total = $bounce['total_count'];
-		$pagination->page = $page;
-		$pagination->limit = $this->config->get('config_admin_limit');
-		$pagination->text = $this->language->get('text_pagination');
-		$pagination->url = $this->url->link('module/bounce', 'token=' . $this->session->data['token'] . $url . '&page={page}', 'SSL');
-			
-		$this->data['pagination'] = $pagination->render();
 		
 		//шаблон для модуля view
 		$this->template = 'module/bounce.tpl';
@@ -98,8 +81,55 @@ class ControllerModuleBounce extends Controller {
 			'common/header',
 			'common/footer'
 		);
+
+		$this->getList();
+
 				
 		$this->response->setOutput($this->render());
+	}
+
+	public function getList() {
+
+		$this->load->model('module/bounce');
+		
+		$bounce = $this->model_module_bounce->getSetting();
+		
+
+		if (isset($this->request->get['page'])) {
+			$page = $this->request->get['page'];
+		} else {
+			$page = 1;
+		}
+		
+		$url = '';
+
+		if (isset($this->request->get['page'])) {
+			$url .= '&page=' . $this->request->get['page'];
+		}
+
+		$data = array(
+			'start' => ($page - 1) * $this->config->get('config_admin_limit'),
+			'limit' => $this->config->get('config_admin_limit')
+		);
+		$stats_first = $stats[0][0];
+		$stats = $this->model_module_bounce->getStats($data);
+		$this->data['stats'] = $stats;
+
+
+		$pagination = new Pagination();
+		$pagination->total = $bounce['total_count']-$stats_first;
+		$pagination->page = $page;
+		$pagination->limit = $this->config->get('config_admin_limit');
+		$pagination->text = $this->language->get('text_pagination');
+		$pagination->url = $this->url->link('module/bounce', 'token=' . $this->session->data['token'] . '&page={page}', 'SSL');
+			
+		$this->data['pagination'] = $pagination->render();
+
+		$this->template = 'module/bounce.tpl';
+		$this->children = array(
+			'common/header',
+			'common/footer'
+		);
 	}
 	
 	public function install() {
