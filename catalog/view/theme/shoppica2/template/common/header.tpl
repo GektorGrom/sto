@@ -95,17 +95,12 @@
           <?php endif; ?>
           <!-- <p id="welcome_message">
             <?php if (!$logged) echo $text_welcome; else echo $text_logged; ?>
-          </p>
+          </p> -->
+          </br>
           <ul class="s_list_1">
-            <?php if ($tbData->common['wishlist_enabled']): ?>
-            <li><a href="<?php echo $wishlist; ?>" id="wishlist_total"><?php echo $text_wishlist; ?></a></li>
-            <?php endif; ?>
-            <li><a href="<?php echo $account; ?>"><?php echo $text_account; ?></a></li>
-            <?php if ($tbData->common['checkout_enabled']): ?>
-            <li><a href="<?php echo $shopping_cart; ?>"><?php echo $text_shopping_cart; ?></a></li>
-            <li><a href="<?php echo $checkout; ?>"><?php echo $text_checkout; ?></a></li>
-            <?php endif; ?>
-          </ul> -->
+            <li><a href="<?php echo $this->url->link('blog/category/home'); ?>"> <?php echo $text_blog; ?> </a></li>
+            <li><a href=#>FAQ</a></li>
+          </ul>
         </div>
 
       </div>

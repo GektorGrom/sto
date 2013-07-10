@@ -39,7 +39,7 @@ $font_button_size   = (int) $_GET['font_button_size'];
   margin: 0;
   padding: 0;
   line-height: inherit;
-  font-family: "Lucida Sans Unicode","Lucida Grande",Arial,Helvetica,sans-serif;
+  font-family: "Open Sans","Lucida Grande",Arial,Helvetica,sans-serif;
   font-size: 100%;
 }
 html {
@@ -114,7 +114,7 @@ a, button, input[type=submit], input[type=reset] {
 /******   B A S I C    S T Y L E S   *****************/
 /*****************************************************/
 body {
-  font: 13px/20px "Lucida Sans Unicode", "Lucida Grande", Arial, sans-serif;
+  font: 13px/20px "Open Sans", "Lucida Grande", Arial, sans-serif;
   <?php if ($language == 'rtl') echo 'direction: rtl;'; ?>
 }
 h1,
@@ -138,14 +138,14 @@ h2 {
 h3 {
   font-size: 16px;
   font-weight: normal;
-  font-style: "Lucida Sans Unicode","Lucida Grande",Arial,Helvetica,sans-serif;
+  font-style: "Open Sans","Lucida Grande",Arial,Helvetica,sans-serif;
 }
 
 h3 a{
   font-size: 15px;
   word-spacing: 1px;
   font-weight: normal;
-  font-style: "Lucida Sans Unicode","Lucida Grande",Arial,Helvetica,sans-serif;
+  font-style: "Open Sans","Lucida Grande",Arial,Helvetica,sans-serif;
 }
 h4 {
   font-size: 14px;
@@ -2661,7 +2661,7 @@ form.s_address {
   line-height: 17px;
   text-transform: none;
   font-size: 11px;
-  font-style: "Lucida Sans Unicode","Lucida Grande",Arial,Helvetica,sans-serif;
+  font-style: "Open Sans","Lucida Grande",Arial,Helvetica,sans-serif;
 }
 
 
@@ -3003,13 +3003,13 @@ body.s_layout_fixed #wrapper {
   margin-right: 10px;
   background-position: 100% -2px;
   <?php endif; ?>
-  font-family: "Lucida Sans Unicode","Lucida Grande",Arial,Helvetica,sans-serif;
+  font-family: "Open Sans","Lucida Grande",Arial,Helvetica,sans-serif;
   font-size: 13px;
   
 }
 
 #vladcat {
-	font-family: "Lucida Sans Unicode","Lucida Grande",Arial,Helvetica,sans-serif;
+	font-family: "Open Sans","Lucida Grande",Arial,Helvetica,sans-serif;
 	font-size: 13px;
 }
 
@@ -3029,22 +3029,23 @@ body.s_layout_fixed #wrapper {
   float: right;
   <?php endif; ?>
   padding: 13px 0 0 0;
-    font-family: "Lucida Sans Unicode","Lucida Grande",Arial,Helvetica,sans-serif;
+  font-family: "Open Sans","Lucida Grande",Arial,Helvetica,sans-serif;
 }
 #categories > ul {
   margin-bottom: 14px;
-  font-family: "Lucida Sans Unicode","Lucida Grande",Arial,Helvetica,sans-serif;
+  font-family: "Open Sans","Lucida Grande",Arial,Helvetica,sans-serif;
 }
 #categories > ul > li,
 #categories > ul > li > a
 {
   height: 32px;
   line-height: 32px;
-  font-family: "Lucida Sans Unicode","Lucida Grande",Arial,Helvetica,sans-serif;
+  font-family: "Open Sans","Lucida Grande",Arial,Helvetica,sans-serif;
 }
 #categories > ul > li > a {
   padding: 0 10px;
-  font-family: "Lucida Sans Unicode","Lucida Grande",Arial,Helvetica,sans-serif;
+  font-family: "Open Sans","Lucida Grande",Arial,Helvetica,sans-serif;
+  font-weight: 300;
 }
 #categories .s_submenu,
 #cart_menu .s_submenu
@@ -5141,7 +5142,7 @@ body,
 #shopping_cart_confirm .s_total.last strong
 {
   <?php if ($font_body == 'default'): ?>
-  font-family: "Lucida Sans Unicode", "Lucida Grande", Arial, sans-serif;
+  font-family: "Open Sans", "Lucida Grande", Arial, sans-serif;
   <?php else: ?>
   font-family: <?php echo $font_body; ?>;
   <?php endif; ?>
@@ -5171,12 +5172,8 @@ h2,
 #cart_menu small.s_text,
 #product .s_tabs_nav li a
 {
-  font-family: "Lucida Sans Unicode", "Lucida Grande", Arial, sans-serif;
-  letter-spacing: -1px;
-  font-size: 14px;
-  <?php if ($font_nav_weight != 'default'): ?>
-  font-weight: <?php echo $font_nav_weight; ?>;
-  <?php endif; ?>
+  font-family: "Open Sans", "Lucida Grande", Arial, sans-serif;
+  font-size: 16px;
 }
 
 #menu_409 > a {color:#a78955;}
@@ -5188,13 +5185,12 @@ h2,
 #menu_38 > a {color:#2a334f;}
 #menu_103 > a {color:#bb1515;}
 #menu_96 > a {color:#3e3a3a;}
-#categories > ul > li > a {font-weight:bold;}
 
 
 #categories > ul > li > a,
 #cart_menu small.s_text
 {
-  font-size: <?php echo $font_nav_size; ?>px;
+  font-size: 130%;
 }
 #intro h1,
 #intro h2
@@ -5219,7 +5215,7 @@ h2,
 {
   <?php if ($font_price == 'default'): ?>
   <?php if ($font_body == 'default'): ?>
-  font-family: "Lucida Sans Unicode", "Lucida Grande", Arial, sans-serif;
+  font-family: "Open Sans", "Lucida Grande", Arial, sans-serif;
   <?php else: ?>
   font-family: <?php echo $font_body; ?>;
   <?php endif; ?>
@@ -5423,7 +5419,7 @@ h2,
   .s_main_col
   {
     width: 700px;
-      font-family: "Lucida Sans Unicode","Lucida Grande",Arial,Helvetica,sans-serif;
+      font-family: "Open Sans","Lucida Grande",Arial,Helvetica,sans-serif;
   }
   .s_col_3 {
     width: 340px;
