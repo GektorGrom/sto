@@ -179,7 +179,7 @@ class Cart {
 					}
 					if (isset($bounce_prices))	{
 						if (time()-$bounce_prices[count($bounce_prices)-1][0]<1800) {
-							if (count($bounce_prices)>1 && $bounce_prices[count($bounce_prices)-3][1] != "bought") $price=$bounce_prices[count($bounce_prices)-1][1];
+							if (count($bounce_prices)>2 && $bounce_prices[count($bounce_prices)-3][1] != "bought") $price=$bounce_prices[count($bounce_prices)-1][1];
 							else $price = $orig_price;
 						}
 					}
