@@ -79,8 +79,8 @@ $_['month_long']           = array(1 => "Январь", 2 => "Февраль", 3
 // %1 = long month, %2 = short month, %3 = long day, %4 = short day
 // other format except the month and dayname above still use http://php.net/manual/en/function.date.php
 
-$_['date_format']          = 'F d, Y';
+$_['date_format']          = 'd.m.Y в H:i';
 $_['date_format_short']    = 'd.m.Y в H:i'; // M d, Y = Jun 10, 2013
-$_['date_format_long']     = '%1 d, Y'; // F d, Y = Juni 10, 2013
-$_['date_time_format']     = '%1 d, Y H:i'; // M d, Y H:i = Jun 10, 2013 17:25
+$_['date_format_long']     = 'd.m.Y в H:i'; // F d, Y = Juni 10, 2013
+$_['date_time_format']     = 'd.m.Y в H:i'; // M d, Y H:i = Jun 10, 2013 17:25
 ?>
