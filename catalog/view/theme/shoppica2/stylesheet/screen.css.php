@@ -3043,7 +3043,7 @@ body.s_layout_fixed #wrapper {
   font-family: "Open Sans","Lucida Grande",Arial,Helvetica,sans-serif;
 }
 #categories > ul > li > a {
-  padding: 0 10px;
+  padding: 0 20px;
   font-family: "Open Sans","Lucida Grande",Arial,Helvetica,sans-serif;
   font-weight: 300;
 }
@@ -4991,8 +4991,8 @@ select[name=customer_group_id]
   font-family: "1na100";
   src:url("../fonts/glyphs/1na100.eot");
   src:url("../fonts/glyphs/1na100.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/glyphs/1na100.ttf") format("truetype"),
     url("../fonts/glyphs/1na100.svg#1na100") format("svg"),
+    url("../fonts/glyphs/1na100.ttf") format("truetype"),
     url("../fonts/glyphs/1na100.woff") format("woff");
   font-weight: normal;
   font-style: normal;
