@@ -15,7 +15,7 @@ $_['text_update']          = 'Обновлена: ';
 $_['text_tags']            = 'Тэги: ';
 $_['text_related']         = 'Вас может заинтересовать: ';
 $_['text_related_product'] = 'Связанные товары: ';
-$_['text_related_article'] = 'Похожая статья ';
+$_['text_related_article'] = 'Новости и обзоры ';
 
 // Comment
 $_['text_comments']        = '%s комм.';
